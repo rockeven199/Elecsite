@@ -1,0 +1,38 @@
+/* 主体设置 */
+.main {
+    margin: 23vh;
+    background-image: linear-gradient(135deg, #F6D242 10%, #FF52E5 100%);
+}
+
+/* 提示设置 */
+.tips {
+    text-align: center;
+    padding-top: 8%;
+    color: white;
+    margin-bottom: 40vh;
+}
+
+a {
+    color: white;
+}
+
+/* 版权设置 */
+.copy {
+    position: fixed;
+    bottom: 0px;
+    left: 45%;
+    font-weight: 100;
+    font-size: 10px;
+}
+
+.next_copy {
+    padding-bottom: 5px;
+}
+
+#tipone {
+    font-size: 1px;
+}
+
+#tiptwo {
+    font-size: 1px;
+}

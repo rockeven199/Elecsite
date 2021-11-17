@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彩蛋</title>
+    <script type="text/javascript" src="./js/jquery-3.5.1.js"></script>
+    <style type="text/css">
+        body {
+            background-color: black;
+            position: relative;
+        }
+
+        button:hover {
+            color: black;
+            background-color: lightgray;
+        }
+
+        button {
+            position: absolute;
+            color: white;
+            background-color: black;
+            border-radius: 60px;
+            font-size: 100px;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #tips {
+            position: absolute;
+            top: 0;
+        }
+
+        ul {
+            display: none;
+            list-style: none;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+
+        video {
+            display: none;
+        }
+    </style>
+</head>
+
+<body onload="ClickPlay(),client()">
+    <video loop="on" id="video" title="Never Gonna Give You Up&nbsp;&nbsp;——Rick Astley(理查德·艾斯利)" autoplay>
+        <source src="./video/928861104_1_0.mp4" type="video/mp4">
+    </video>
+    <ul id="tips">
+        <li style="color: white;text-align: center;">呀呼！！！被骗了吧,哈哈哈哈哈哈哈哈哈哈哈哈</li>
+        <li><img src="./img/u=2857219927,2848303699&fm=15&fmt=auto.webp" alt="" style="opacity:0.8;"></li>
+    </ul>
+</body>
+<script type="text/javascript">
+    var h = $(window).innerHeight();
+    var w = $(window).innerWidth();
+    $("video").css({
+        height: h - 20,
+        width: w - 20
+    });
+    var statu = document.getElementById("video");
+    function ClickPlay() {
+        statu.play();
+        $("video").show();
+        $("a").hide();
+        $("ul").show();
+        $("title").text("哈哈哈，被骗了吧")
+    }
+
+    // UA判断
+    function client() {
+        var getUA = navigator.userAgent;
+        var Agent = ["Android", "HMSCore", "Mobile", "iPhone"]
+        for (var v = 0; v < Agent.length; v++) {
+            if (getUA.indexOf(Agent[v]) > 0) {
+                $("img").css({
+                    height: h - 550 + 'px',
+                    width: w - 200 + 'px'
+                });
+            }
+            else {
+                $("video").css({
+                    height: h - 20,
+                    width: w - 20
+                });
+            }
+        }
+    }
+</script>
+
+</html>

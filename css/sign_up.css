@@ -1,0 +1,468 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+* {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+}
+
+#ChangePageColor,
+.panel,
+.hr {
+    transition: all 1s;
+}
+
+/* 主体设置 */
+.panel {
+    left: 0;
+    border: 3px solid rgba(0, 0, 0, 0.808);
+    border-radius: 8px;
+    background-color: rgba(202, 202, 202, 0.76);
+    width: 24vw;
+    padding-bottom: 2.5vh;
+    margin-top: 1%;
+    z-index: 999;
+}
+
+.subbtn {
+    outline: none;
+    border: none;
+    width: 4vw;
+    background-color: rgba(255, 53, 147, 0.712);
+    color: #ffffff;
+    border-radius: 2px;
+}
+
+#chinese_translate {
+    margin-left: 9.5px;
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    position: absolute;
+
+}
+
+#english_translate {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.title {
+    z-index: 988;
+    font-weight: 900;
+    transition: all 0.2s;
+    width: 20%;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 45px;
+    margin-top: 6%;
+    margin-bottom: 3%;
+    color: white;
+}
+
+.font {
+    color: rgba(0, 0, 0, 0.774);
+}
+
+
+.title:hover {
+    transition: all 0.2s;
+    color: rgba(255, 253, 253, 0.7);
+}
+
+#qiehuan{
+    display: inline-flex;
+}
+
+input::-webkit-input-placeholder{
+    font-weight: bold;
+    color: white;
+}
+input::-moz-placeholder{
+    font-weight: bold;
+    color:white;
+}
+input:-ms-input-placeholder{
+    font-weight: bold;
+    color: white;
+}
+
+input:hover {
+    box-shadow: 0px 0px 2.5px black;
+    border-radius: 2px;
+}
+
+button:hover {
+    box-shadow: 0px 0px 2.5px black;
+    border-radius: 2px;
+}
+
+.subbtn:hover {
+    box-shadow: 0px 0px 2.5px rgb(255, 255, 255);
+}
+
+.GoLogin:hover {
+    box-shadow: 0px 0px 2.5px rgb(255, 255, 255);
+}
+
+.item {
+    width: 24vw;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    line-height: 9vh;
+    position: relative;
+}
+#defind{
+    margin-left: 13px;
+    text-align: center;
+    width:45px;
+    height:27px;
+    font-size: 10px;
+    margin: none;
+    padding:none;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    display: none;
+    background-color: transparent;
+}
+
+.item input {
+    padding-left: 1vw;
+    border-radius:20px;
+    height: 4vh;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.733);
+    outline: none;
+    border: none;
+    border-bottom: rgba(0, 0, 0, 0.678) solid 2px;
+}
+
+.item label {
+    top: 0px;
+    transition: all 0.2s linear;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    left: 4vw;
+    position: absolute;
+}
+
+.item input:focus+label {
+    top: -25px;
+    font-size: 14px;
+}
+
+.item input:valid+label {
+    top: -25px;
+    font-size: 14px;
+}
+
+.item>#Email:valid+label {
+    top: -20px;
+    font-size: 14px;
+}
+
+#email:invalid {
+    font-size: 14px;
+}
+
+
+.GoLogin {
+    background-color: rgba(141, 53, 255, 0.721);
+    border: none;
+    padding: 0px 5px;
+    border-radius: 2px;
+}
+
+.GoLoginHref {
+    color: white;
+    width: 10vw;
+    text-decoration: none;
+}
+
+.BgMask {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+    width: 100%
+}
+
+/* 切换按钮样式 */
+#blue,#white,#pink,#black{
+    display: none;
+}
+#qiehuan{
+    display: flex;
+    flex-direction: row;
+    margin:20px 20px 20px 0px;
+    z-index: 999;
+    position: absolute;
+    list-style: none;
+}
+#qiehuan li:nth-child(2){
+    width:35px;
+    height:35px;
+    margin-left: 60px;
+    margin-right: 10px;
+} 
+
+#qiehuan li:nth-child(n+2) svg{
+    padding-left: 10px;
+    width:35px;
+    height:35px;
+}
+
+#qiehuan li:first-child svg{
+    width:35px;
+    height:35px;
+}
+
+#qiehuan li:last-child{
+    font-size: 8px;
+    width:35px;
+    height:35px;
+}
+#qiehuan li:last-child input{
+    background-color:black;
+}
+svg,path{
+    width:35px;
+    height:35px;
+}
+/* 版权,联系方式设置 */
+/* 绝对定位，左、右各为0对齐*/
+.copy {
+    background: rgba(255, 255, 255, 0.658);
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.next_copy {
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+.CallMe {
+    color: rgba(0, 0, 0, 0.623)
+}
+
+.hr {
+    background: rgb(0, 0, 0);
+    margin: 0;
+    border: none;
+    width: 10%;
+}
+
+.Method {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.623);
+    padding-left: 10px;
+}
+
+/* 主题切换 */
+#ChangePageColor {
+    position: absolute;
+    align-items: center;
+    left: 15px;
+    top: 15px;
+    height: 5%;
+    padding: 0 1%;
+    display: flex;
+    border-radius: 7px;
+    border: transparent;
+    z-index: 999;
+    outline: none;
+}
+
+/* 媒体查询适应 */
+@media screen and (max-width:300px){
+    #qiehuan{
+        flex-direction: column;
+        display: inline-flex;
+    }
+    #qiehuan li:nth-child(2){
+        margin-left: 0;
+        margin-top:80%;
+        width:25px;
+        height:25px;
+    }
+    #qiehuan li:nth-child(n+2){
+        margin-left: 10%;
+    }
+    #qiehuan li:nth-child(3){
+        margin-top:5px;
+    }
+    path {
+        margin: 0;
+        padding: 0;
+    }
+    #qiehuan li:nth-child(6) input{
+        margin-left:7px;
+        width:40px;
+        padding: 0;
+    }
+    .panel{
+        width:70%;
+    }
+    .item input{
+        width:80%;
+    }
+    .item{
+        width:100%;
+    }
+    .item label{
+        font-size: 10px;
+        left:10vw;
+    }
+    .item input:focus+label{
+        font-size: 10px;
+        top: -20px;
+    }
+    #title{
+        display:flex;
+        justify-content: center;
+    }
+    #qiehuan li svg{
+        width: 25px;
+        height:25px;
+    }
+    .subbtn {
+        outline: none;
+        border: none;
+        width: 14vw;
+        background-color: rgba(255, 53, 147, 0.712);
+        color: #ffffff;
+        border-radius: 2px;
+        font-size: 10px;
+    }
+    .GoLogin{
+        font-size:10px;
+    }
+}
+
+@media screen and (max-width:600px)and (min-width:300px){
+    #ChangePageColor{
+        margin: 0;
+        padding: 0;
+    }
+    .panel{
+        margin-top: 10%;
+        width:70%;
+    }
+    .item{
+        height:100%;
+        width: 100%;
+    }
+    .item label{
+        font-size: 12px;
+        top: 0;
+        left: 8vw;
+    }
+    .item input:focus+label{
+        font-size: 12px;
+        top: -16px;
+    }
+    svg{
+        width: 10px;
+    }
+    #qiehuan{
+        flex-direction: column;
+        display: inline-flex;
+    }
+    #qiehuan li:nth-child(2){
+        margin-left: 0;
+        margin-top:90%;
+        margin-bottom:10%;
+    }
+    #qiehuan li:nth-child(n+2){
+        margin-left: 10%;
+    }
+    path {
+        margin: 0;
+        padding: 0;
+    }
+    #qiehuan li:nth-child(6) input{
+        margin-left:7px;
+        width:40px;
+        padding: 0;
+    }
+    .item input{
+        padding-left: 3vw;
+        width:80%;
+    }
+    #title {
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    .subbtn {
+        outline: none;
+        border: none;
+        width: 14vw;
+        background-color: rgba(255, 53, 147, 0.712);
+        color: #ffffff;
+        border-radius: 2px;
+    }
+    .title{
+        margin-top: 15%;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:700px) {
+    .panel{
+        width: 60%;
+    }
+    .item{
+        width:100%;
+    }
+    .item label{
+        left: 10vw;
+    }
+    .subbtn {
+        width:10vw;
+        background-color: rgba(255, 53, 147, 0.712);
+    }
+}
+@media screen and (min-width:700px) and (max-width:1000px) {
+    .panel{
+        width: 35%;
+    }
+    .item{
+        width:100%;
+    }
+    .item label{
+        left: 6vw;
+    }
+    .subbtn {
+        width:22%;
+        background-color: rgba(255, 53, 147, 0.712);
+    }
+}
+@media screen and (min-width:1000px) and (max-width:1500px) {
+    .panel{
+        margin-top: 7%;
+        width:30%;
+    }
+    .item{
+        width:100%;
+    }
+    .item label{
+        left:5vw;
+    }
+}
+/* 手机 */
